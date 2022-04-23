@@ -21,11 +21,11 @@ class NavBarMenu extends React.Component {
               style={{ maxHeight: '100px'}}
               navbarScroll
             >
-              <Nav.Link className="navbar_link" href="#action1">Рахунки</Nav.Link>
-              <Nav.Link className="navbar_link" href="#action2">Команда</Nav.Link>
-              <Nav.Link className="navbar_link" href="#action3">документація фонду</Nav.Link>
-              <Nav.Link className="navbar_link" href="#action4">Звітність</Nav.Link>
-              <Nav.Link className="navbar_link" href="#action5">Фотозвіти</Nav.Link>
+              <Nav.Link className="navbar_link" href="./pages/accounts.html">Рахунки</Nav.Link>
+              <Nav.Link className="navbar_link" href="./pages/team.html">Команда</Nav.Link>
+              <Nav.Link className="navbar_link" href="./pages/docs.html">Документація фонду</Nav.Link>
+              <Nav.Link className="navbar_link" href="./pages/reports.html">Звітність</Nav.Link>
+              <Nav.Link className="navbar_link" href="./pages/photo.html">Фотозвіти</Nav.Link>
             </Nav>
             <Form className="d-flex">
             </Form>
@@ -43,12 +43,26 @@ class Contant extends React.Component {
         </div>);
   }
 }
+class Footer extends React.Component {
+  render() {
+    return (
+      <footer id="footer">
+        <p id="header">Наші контакти:</p>
+        <p className='footer_text'>електронна пошта</p>
+        <p className='footer_text'>Телефон</p>
+        <p className='footer_text'>Де ми знаходимось:</p>
+        <p className='footer_text'>Адреса</p>
+      </footer>
+    );
+  }
+}
 class App extends React.Component {
   render() {
     return (
       <>
       <NavBarMenu />
       <Contant />
+      <Footer />
       </>);
   }
 }
