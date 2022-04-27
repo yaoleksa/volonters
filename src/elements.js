@@ -31,6 +31,34 @@ class NavBarMenu extends React.Component {
       </Navbar>);
     }
 }
+
+class NavBarMenuPages extends React.Component {
+  render() {
+    return (
+      <Navbar bg="dark" variant="dark" expand="lg" lang="ua">
+      <Container fluid>
+        <Navbar.Brand href="#">Головна</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px'}}
+            navbarScroll
+          >
+            <Nav.Link className="navbar_link" href="./accounts.html">Рахунки</Nav.Link>
+            <Nav.Link className="navbar_link" href="./team.html">Команда</Nav.Link>
+            <Nav.Link className="navbar_link" href="./docs.html">Документація фонду</Nav.Link>
+            <Nav.Link className="navbar_link" href="./reports.html">Звітність</Nav.Link>
+            <Nav.Link className="navbar_link" href="./photo.html">Фотозвіти</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>);
+  }
+}
+
 class Contant extends React.Component {
   render() {
     return (<div>
@@ -54,4 +82,4 @@ class Footer extends React.Component {
   }
 }
 
-export { NavBarMenu, Contant, Footer };
+export { NavBarMenu, Contant, Footer, NavBarMenuPages };

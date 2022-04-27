@@ -5,7 +5,7 @@ import * as React from 'react';
 class App extends React.Component {
     render() {
         return (<>
-        <Elements.NavBarMenu />
+        <Elements.NavBarMenuPages />
         <Elements.Footer />
         </>)
     }
