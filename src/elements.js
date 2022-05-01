@@ -18,7 +18,9 @@ class NavBarMenu extends React.Component {
               style={{ maxHeight: '100px'}}
               navbarScroll
             >
-              <Nav.Link className="navbar_link" href="./pages/accounts.html">Рахунки</Nav.Link>
+              <Nav.Link className="navbar_link" href="./pages/accounts.html" 
+              eventKey="accounts"
+              id="accounts">Рахунки</Nav.Link>
               <Nav.Link className="navbar_link" href="./pages/team.html">Команда</Nav.Link>
               <Nav.Link className="navbar_link" href="./pages/docs.html">Документація фонду</Nav.Link>
               <Nav.Link className="navbar_link" href="./pages/reports.html">Звітність</Nav.Link>
@@ -32,7 +34,115 @@ class NavBarMenu extends React.Component {
     }
 }
 
-class NavBarMenuPages extends React.Component {
+class NavBarMenuAccounts extends React.Component {
+  render() {
+    return (
+      <Navbar bg="dark" variant="dark" expand="lg" lang="ua">
+      <Container fluid>
+        <Navbar.Brand href="../index.html">Головна</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px'}}
+            navbarScroll
+          >
+            <Nav.Link className="navbar_link" href="./accounts.html" active>Рахунки</Nav.Link>
+            <Nav.Link className="navbar_link" href="./team.html">Команда</Nav.Link>
+            <Nav.Link className="navbar_link" href="./docs.html">Документація фонду</Nav.Link>
+            <Nav.Link className="navbar_link" href="./reports.html">Звітність</Nav.Link>
+            <Nav.Link className="navbar_link" href="./photo.html">Фотозвіти</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>);
+  }
+}
+
+class NavBarMenuTeam extends React.Component {
+  render() {
+    return (
+      <Navbar bg="dark" variant="dark" expand="lg" lang="ua">
+      <Container fluid>
+        <Navbar.Brand href="../index.html">Головна</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px'}}
+            navbarScroll
+          >
+            <Nav.Link className="navbar_link" href="./accounts.html">Рахунки</Nav.Link>
+            <Nav.Link className="navbar_link" href="./team.html" active>Команда</Nav.Link>
+            <Nav.Link className="navbar_link" href="./docs.html">Документація фонду</Nav.Link>
+            <Nav.Link className="navbar_link" href="./reports.html">Звітність</Nav.Link>
+            <Nav.Link className="navbar_link" href="./photo.html">Фотозвіти</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>);
+  }
+}
+
+class NavBarMenuDocs extends React.Component {
+  render() {
+    return (
+      <Navbar bg="dark" variant="dark" expand="lg" lang="ua">
+      <Container fluid>
+        <Navbar.Brand href="../index.html">Головна</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px'}}
+            navbarScroll
+          >
+            <Nav.Link className="navbar_link" href="./accounts.html">Рахунки</Nav.Link>
+            <Nav.Link className="navbar_link" href="./team.html">Команда</Nav.Link>
+            <Nav.Link className="navbar_link" href="./docs.html" active>Документація фонду</Nav.Link>
+            <Nav.Link className="navbar_link" href="./reports.html">Звітність</Nav.Link>
+            <Nav.Link className="navbar_link" href="./photo.html">Фотозвіти</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>);
+  }
+}
+
+class NavBarMenuReports extends React.Component {
+  render() {
+    return (
+      <Navbar bg="dark" variant="dark" expand="lg" lang="ua">
+      <Container fluid>
+        <Navbar.Brand href="../index.html">Головна</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px'}}
+            navbarScroll
+          >
+            <Nav.Link className="navbar_link" href="./accounts.html">Рахунки</Nav.Link>
+            <Nav.Link className="navbar_link" href="./team.html">Команда</Nav.Link>
+            <Nav.Link className="navbar_link" href="./docs.html">Документація фонду</Nav.Link>
+            <Nav.Link className="navbar_link" href="./reports.html" active>Звітність</Nav.Link>
+            <Nav.Link className="navbar_link" href="./photo.html">Фотозвіти</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>);
+  }
+}
+
+class NavBarMenuPhoto extends React.Component {
   render() {
     return (
       <Navbar bg="dark" variant="dark" expand="lg" lang="ua">
@@ -49,7 +159,7 @@ class NavBarMenuPages extends React.Component {
             <Nav.Link className="navbar_link" href="./team.html">Команда</Nav.Link>
             <Nav.Link className="navbar_link" href="./docs.html">Документація фонду</Nav.Link>
             <Nav.Link className="navbar_link" href="./reports.html">Звітність</Nav.Link>
-            <Nav.Link className="navbar_link" href="./photo.html">Фотозвіти</Nav.Link>
+            <Nav.Link className="navbar_link" href="./photo.html" active>Фотозвіти</Nav.Link>
           </Nav>
           <Form className="d-flex">
           </Form>
@@ -82,4 +192,11 @@ class Footer extends React.Component {
   }
 }
 
-export { NavBarMenu, Contant, Footer, NavBarMenuPages };
+export { Contant, 
+  Footer, 
+  NavBarMenuAccounts, 
+  NavBarMenuTeam, 
+  NavBarMenuDocs, 
+  NavBarMenuPhoto, 
+  NavBarMenuReports, 
+  NavBarMenu };

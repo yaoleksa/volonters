@@ -1,11 +1,11 @@
 import * as Elements from '../src/elements';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 
 class App extends React.Component {
     render() {
         return (<>
-        <Elements.NavBarMenuPages />
+        <Elements.NavBarMenuReports />
         <Elements.Footer />
         </>)
     }
