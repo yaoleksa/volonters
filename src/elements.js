@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class NavBarMenu extends React.Component {
@@ -195,10 +196,22 @@ class FileUploader extends React.Component {
   render() {
     return (
       <div id="inputFile">
-        <input type="file" multiple></input>
+        <input type="file" id="get_file_from_pc" multiple></input>
       </div>
     );
   }
+}
+class PhotoUpload extends React.Component {
+  render() {
+    return (
+      <Button variant="success" onClick={uploadPhoto}>Завантажити фото</Button>
+    );
+  }
+}
+
+function uploadPhoto() {
+  const fileButton = document.getElementById('get_file_from_pc');
+  fileButton.click();
 }
 
 export { Contant, 
@@ -209,4 +222,5 @@ export { Contant,
   NavBarMenuPhoto, 
   NavBarMenuReports, 
   NavBarMenu,
-  FileUploader };
+  FileUploader,
+  PhotoUpload };
