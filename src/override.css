@@ -17,6 +17,9 @@
     position: absolute;
     bottom: 0;
 }
+/* #inputFile {
+    display: none;
+} */
 .footer_text {
     margin-left: 2em;
 }

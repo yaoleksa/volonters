@@ -6,6 +6,7 @@ class App extends React.Component {
     render() {
         return (<>
         <Elements.NavBarMenuPhoto />
+        <Elements.FileUploader />
         <Elements.Footer />
         </>)
     }

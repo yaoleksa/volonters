@@ -191,6 +191,15 @@ class Footer extends React.Component {
     );
   }
 }
+class FileUploader extends React.Component {
+  render() {
+    return (
+      <div id="inputFile">
+        <input type="file" multiple></input>
+      </div>
+    );
+  }
+}
 
 export { Contant, 
   Footer, 
@@ -199,4 +208,5 @@ export { Contant,
   NavBarMenuDocs, 
   NavBarMenuPhoto, 
   NavBarMenuReports, 
-  NavBarMenu };
+  NavBarMenu,
+  FileUploader };
